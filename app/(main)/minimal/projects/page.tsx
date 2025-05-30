@@ -2,7 +2,7 @@
 import ProjectPage from '@/components/project-page'
 import React from 'react'
 import { motion } from 'framer-motion';
-import { ThemeProvider } from '@/components/theme-context';
+
 
 export default function Projects() {
   return (
@@ -12,9 +12,9 @@ export default function Projects() {
       transition={{ duration: .3, ease: 'easeInOut' }}
       className="w-full h-full"
     >
-      <ThemeProvider>
+
 <ProjectPage/>
-</ThemeProvider>
+
     </motion.div>
 )
 }

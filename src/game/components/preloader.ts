@@ -33,7 +33,7 @@ export default class Preloader extends Scene {
   this.load.spritesheet("npc2", "assets/character/npc2.png", {frameWidth: 32, frameHeight: 48});
   this.load.spritesheet("nurse", "assets/character/nurse.png", {frameWidth: 32, frameHeight: 48});
   this.load.spritesheet("lady", "assets/character/lady.png", {frameWidth: 32, frameHeight: 48});
-  this.load.spritesheet("npc4", "assets/character/npc4.png", {frameWidth: 32, frameHeight: 48});
+  this.load.spritesheet("nnpc", "assets/character/nnpc.png", {frameWidth: 32, frameHeight: 48});
   this.load.spritesheet("npc8", "assets/character/npc8.png", {frameWidth: 32, frameHeight: 48});
   this.load.spritesheet("npc5", "assets/character/npc5.png", {frameWidth: 32, frameHeight: 48});
   this.load.image("arrow_up", "assets/d-pad/arrow_up.png");
@@ -44,7 +44,7 @@ export default class Preloader extends Scene {
 }
 
   create() {
-    this.scene.start("upstairs");
+    this.scene.start("myhouse");
 
   }
 }

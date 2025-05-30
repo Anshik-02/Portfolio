@@ -88,7 +88,7 @@ createdText.setBackgroundColor("white")
     this.cameras.main.setZoom(1.5);
     this.cameras.main.startFollow(this.me, true, 0.08, 0.08);
     this.me.setDepth(this.me.y);
-    OnsLayer?.setDepth(999);
+    OnsLayer?.setDepth(9999);
 
     if (!this.sound.get('bgMusic')) {
       const music = this.sound.add('bgMusic', { loop: true, volume: 0.07 });
@@ -108,10 +108,15 @@ console.log(textProp)
       this.infoZones.push(zone);
 
       this.physics.add.overlap(this.me, zone, () => {
-        if ((zone as any).dialogueText) {
-          this.dialogueManager.show((zone as any).dialogueText);
-        }
-      });
+  if (!(zone as any).hasTriggered && (zone as any).dialogueText) {
+    (zone as any).hasTriggered = true; // mark as triggered
+    this.dialogueManager.show((zone as any).dialogueText, undefined, () => {
+      (zone as any).hasTriggered = true;
+      
+    });
+  }
+});
+
     });
 
     // DOORS
@@ -181,7 +186,7 @@ console.log(textProp)
     this.npcManager.update();
     this.dialogueManager.update();
 
-    const speed = 250;
+    const speed = 150;
     const prevVelocity = this.me.body?.velocity.clone();
     this.me.body?.setVelocity(0);
 

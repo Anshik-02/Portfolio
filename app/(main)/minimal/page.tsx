@@ -11,7 +11,6 @@ export default function MinimalPage() {
       className="w-full h-full"
     >
   <AboutMe />;
-  
     </motion.div>
 
 

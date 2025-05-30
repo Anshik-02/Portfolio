@@ -19,10 +19,7 @@ export default function CardComponent() {
     technologies: ["Next.js", "Tailwind CSS", "TypeScript", "Phaser.js"],imageUrl:"/portfolio.png",githubLink:"",liveLink:""}     
  
  ]
- 
- 
- 
- 
+
     return (
     <div className='mt-8 md:ml-0 ml-0.5'>
         <div className="grid gap-8 md:grid-cols-2 ">

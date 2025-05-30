@@ -51,7 +51,7 @@
                         {
                          "name":"texture",
                          "type":"string",
-                         "value":"npc4"
+                         "value":"nnpc"
                         }],
                  "rotation":0,
                  "type":"",

@@ -2,10 +2,11 @@
 import React from "react";
 import SkillComponent from "@/components/skill-component";
 import { Button } from "@/components/ui/button";
-import { Github } from "lucide-react";
+import { Car, Github } from "lucide-react";
 import Image from "next/image";
 import TypedText from "./Typed-text";
 import Link from "next/link";
+import CAR from "./carsouel";
 
 
 export default function AboutMe() {
@@ -65,7 +66,9 @@ export default function AboutMe() {
       </div>
       <div className="pt-12">
         <SkillComponent />
+        
       </div>
+   
     </div>
   );
 }

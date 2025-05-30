@@ -5,10 +5,10 @@ export class DPad1 {
 
         const cam = scene.cameras.main;
 
-        this.up = scene.add.image(x, y - size, 'arrow_up').setInteractive().setScrollFactor(0).setDepth(1000).setAlpha(.5);
-        this.down = scene.add.image(x, y + size, 'arrow_down').setInteractive().setScrollFactor(0).setDepth(1000).setAlpha(.5);
-        this.left = scene.add.image(x - size, y, 'arrow_left').setInteractive().setScrollFactor(0).setDepth(1000).setAlpha(.5);
-        this.right = scene.add.image(x + size, y, 'arrow_right').setInteractive().setScrollFactor(0).setDepth(1000).setAlpha(.5);
+        this.up = scene.add.image(x, y - size, 'arrow_up').setInteractive().setScrollFactor(0).setDepth(9999999999).setAlpha(.5);
+        this.down = scene.add.image(x, y + size, 'arrow_down').setInteractive().setScrollFactor(0).setDepth(9999999999).setAlpha(.5);
+        this.left = scene.add.image(x - size, y, 'arrow_left').setInteractive().setScrollFactor(0).setDepth(9999999999).setAlpha(.5);
+        this.right = scene.add.image(x + size, y, 'arrow_right').setInteractive().setScrollFactor(0).setDepth(9999999999).setAlpha(.5);
 
         this._setupButton(this.up, 'up');
         this._setupButton(this.down, 'down');

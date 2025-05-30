@@ -12,11 +12,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useTheme } from "./theme-context";
 
-export default function Navbar() {
+
+export default function Navbar({theme,setTheme}:any) {
   const pathname = usePathname();
-  const {theme,setTheme}=useTheme()
+
   const themes = [
     { id: "theme-dark", label: "Dark" },
     { id: "theme-light", label: "Light" },

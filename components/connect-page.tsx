@@ -1,32 +1,11 @@
 "use client"
 import FormComponent from "@/components/form-component";
 import SocialMediaComponent from "@/components/social-media-component";
-import { useTheme } from "./theme-context";
+
 import { useEffect } from "react";
 
 export default function ConnectPage() {
-    const {theme}=useTheme()
-  useEffect(() => {
-       const handler = (event: MessageEvent) => {
-         if (event.data.theme) {
-           document.body.classList.remove(
-             'theme-dark',
-             'theme-light',
-             'theme-pink',
-             'theme-ember',
-             'theme-sunset'
-           );
-           document.body.classList.add(event.data.theme);
-         }
-       };
    
-       window.addEventListener('message', handler);
-   
-       // Clean up on unmount
-       return () => {
-         window.removeEventListener('message', handler);
-       };
-     }, []);
   return (
     <div className="flex justify-center flex-col text-foreground items-center">
       <div className=" mt-12 flex-col text-start  ">

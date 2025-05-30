@@ -1,32 +1,10 @@
-"use client"
-import React, { useEffect } from 'react'
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import Image from "next/image";
 
 
 export default function ResumePage() {
- useEffect(() => {
-      const handler = (event: MessageEvent) => {
-        if (event.data.theme) {
-          document.body.classList.remove(
-            'theme-dark',
-            'theme-light',
-            'theme-pink',
-            'theme-ember',
-            'theme-sunset'
-          );
-          document.body.classList.add(event.data.theme);
-        }
-      };
-  
-      window.addEventListener('message', handler);
-  
-      // Clean up on unmount
-      return () => {
-        window.removeEventListener('message', handler);
-      };
-    }, []);
+ 
   return (
         <div>
       <div className="text-foreground  mt-12 flex justify-between flex-col items-center">

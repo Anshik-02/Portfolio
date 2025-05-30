@@ -29,7 +29,7 @@ export class DialogueManager1 {
       "",
       {
         fontSize: "14px",
-        fontFamily: "Pixelify Sans",
+        fontFamily: "poppins",
         color: "#ffffff",
         align:"center",
         wordWrap: { width: this.textBox.width - 20 },
@@ -69,7 +69,7 @@ export class DialogueManager1 {
   });
 
   this.sectionType = sectionType;
-console.log("contro;",sectionType)
+
 
 }
 

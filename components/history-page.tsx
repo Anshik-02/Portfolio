@@ -1,28 +1,8 @@
 "use client"
-import React, { useEffect } from 'react'
+import React from 'react'
 export default function HistoryPage() {
 
- useEffect(() => {
-      const handler = (event: MessageEvent) => {
-        if (event.data.theme) {
-          document.body.classList.remove(
-            'theme-dark',
-            'theme-light',
-            'theme-pink',
-            'theme-ember',
-            'theme-sunset'
-          );
-          document.body.classList.add(event.data.theme);
-        }
-      };
-  
-      window.addEventListener('message', handler);
-  
-      // Clean up on unmount
-      return () => {
-        window.removeEventListener('message', handler);
-      };
-    }, []);
+ 
   return (
     <div className="text-foreground/90 flex justify-center items-center mt-12 flex-col">
       <div className="text-start max-w-2xl">

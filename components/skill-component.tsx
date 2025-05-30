@@ -20,16 +20,15 @@ import {
 } from 'lucide-react';
 import React, { useEffect } from 'react';
 import { Badge } from './ui/badge';
-import { ThemeProvider } from './theme-context';
 
 export default function SkillComponent() {
  
  
  
   return (
-    <ThemeProvider>
+
       <Main/>
-    </ThemeProvider>
+
   )
 }
 
@@ -54,27 +53,7 @@ function Main(){
     { icon: <Plus className="!w-10 !h-10" />, label: 'Shadcn' },
     { icon: <Plug className="!w-10 !h-10" />, label: 'WebSockets' },
   ];
-   useEffect(() => {
-      const handler = (event: MessageEvent) => {
-        if (event.data.theme) {
-          document.body.classList.remove(
-            'theme-dark',
-            'theme-light',
-            'theme-pink',
-            'theme-ember',
-            'theme-sunset'
-          );
-          document.body.classList.add(event.data.theme);
-        }
-      };
   
-      window.addEventListener('message', handler);
-  
-      // Clean up on unmount
-      return () => {
-        window.removeEventListener('message', handler);
-      };
-    }, []);
   return (<div className=''><p className="text-3xl md:text-5xl font-semibold text-foreground text-center mb-6">Skills & Technologies</p>
 
     <div className=" py-8 flex items-center justify-center ">

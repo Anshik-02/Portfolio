@@ -34,8 +34,8 @@ body{
 
 @layer base {
 .theme-dark {
-  --background: #020817;      /* deep navy black */
-  --foreground: #e5e7eb;      /* soft grayish white (not pure white) */
+  --background: #020817;     
+  --foreground: #e5e7eb;     
   --primary: #111827;         /* slightly lighter dark for sections/cards */
   --secondary: #374151;       /* mid-gray for borders, dividers */
   --accent: #3b82f6;          /* vibrant blue for buttons/links/highlights */
@@ -58,19 +58,19 @@ body{
   --accent: #ff1493;     
 }
 .theme-sunset {
-  --background: #ffedd5;       /* warm peach */
-  --foreground: #7c2d12;       /* deep burnt orange */
-  --primary: #f97316;          /* orange */
-  --secondary: #fdba74;        /* soft apricot */
-  --accent: #fb923c;           /* glowing sunset */
+  --background: #ffedd5;       
+  --foreground: #7c2d12;       
+  --primary: #f97316;          
+  --secondary: #fdba74;        
+  --accent: #fb923c;           
 }
 
 .theme-ember {
-  --background: #1c1c1c;         /* charcoal black */
-  --foreground: #fef3c7;         /* warm cream */
-  --primary: #f97316;            /* glowing ember orange */
-  --secondary: #b45309;          /* deep burnt orange */
-  --accent: #fde68a;             /* soft gold spark */
+  --background: #1c1c1c;         
+  --foreground: #fef3c7;         
+  --primary: #f97316;            
+  --secondary: #b45309;          
+  --accent: #fde68a;             
 }
 }
 
