@@ -44,7 +44,7 @@ export default class Preloader extends Scene {
 }
 
   create() {
-    this.scene.start("myhouse");
+    this.scene.start("upstairs");
 
   }
 }
