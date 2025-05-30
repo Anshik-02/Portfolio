@@ -1,0 +1,96 @@
+"use client"
+import {
+  Gamepad2,
+  GitBranch,
+  Palette,
+  Laptop,
+  Server,
+  Database,
+  Paintbrush,
+  Github,
+  Figma,
+  Code2,
+  TerminalSquare,
+  Triangle,
+  Languages,
+  Code,
+  Plus,
+  Plug,
+  Atom,
+} from 'lucide-react';
+import React, { useEffect } from 'react';
+import { Badge } from './ui/badge';
+import { ThemeProvider } from './theme-context';
+
+export default function SkillComponent() {
+ 
+ 
+ 
+  return (
+    <ThemeProvider>
+      <Main/>
+    </ThemeProvider>
+  )
+}
+
+
+function Main(){
+
+  const skills = [
+    { icon: <Code2 className="!w-10 !h-10" />, label: 'JavaScript' },
+    { icon: <Atom className="!w-10 !h-10" />, label: 'React.js' },
+    { icon: <Triangle className="!w-10 !h-10" />, label: 'Next.js' },
+    { icon: <Gamepad2 className="!w-10 !h-10" />, label: 'Phaser.js' },
+    { icon: <GitBranch className="!w-10 !h-10" />, label: 'Git' },
+    { icon: <Github className="!w-10 !h-10" />, label: 'GitHub' },
+    { icon: <Paintbrush className="!w-10 !h-10" />, label: 'Photoshop' },
+    { icon: <Palette className="!w-10 !h-10" />, label: 'Figma' },
+    { icon: <Database className="!w-10 !h-10" />, label: 'PostgreSQL' },
+    { icon: <Database className="!w-10 !h-10" />, label: 'MongoDB' },
+    { icon: <Database className="!w-10 !h-10" />, label: 'Redis' },
+    { icon: <TerminalSquare className="!w-10 !h-10" />, label: 'Node.js' },
+    { icon: <Languages className="!w-10 !h-10" />, label: '日本語 N4' },
+    { icon: <Code className="!w-10 !h-10" />, label: 'Express' },
+    { icon: <Plus className="!w-10 !h-10" />, label: 'Shadcn' },
+    { icon: <Plug className="!w-10 !h-10" />, label: 'WebSockets' },
+  ];
+   useEffect(() => {
+      const handler = (event: MessageEvent) => {
+        if (event.data.theme) {
+          document.body.classList.remove(
+            'theme-dark',
+            'theme-light',
+            'theme-pink',
+            'theme-ember',
+            'theme-sunset'
+          );
+          document.body.classList.add(event.data.theme);
+        }
+      };
+  
+      window.addEventListener('message', handler);
+  
+      // Clean up on unmount
+      return () => {
+        window.removeEventListener('message', handler);
+      };
+    }, []);
+  return (<div className=''><p className="text-3xl md:text-5xl font-semibold text-foreground text-center mb-6">Skills & Technologies</p>
+
+    <div className=" py-8 flex items-center justify-center ">
+      
+      <div className="grid grid-cols-3 sm:grid-cols-3 gap-5 md:grid-cols-4 ">
+        {skills.map((skill) => (
+          <Badge
+            key={skill.label}
+            className="flex flex-col md:h-30 md:w-40 h-20 w-22 items-center justify-center gap-2 py-4 px-2 bg-transparent border border-neutral-400 text-foreground/80 rounded-xl"
+          >
+            {skill.icon}
+            <span className="text-sm font-medium">{skill.label}</span>
+          </Badge>
+        ))}
+      </div>
+    </div>
+    </div>
+  );
+}
